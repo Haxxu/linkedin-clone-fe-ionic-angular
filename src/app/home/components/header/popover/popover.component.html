@@ -1,0 +1,42 @@
+<ion-card>
+  <ion-card-header>
+    <ion-grid>
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col size="auto">
+          <ion-avatar>
+            <ion-img
+              src="https://images.unsplash.com/photo-1508185140592-283327020902?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            ></ion-img>
+          </ion-avatar>
+        </ion-col>
+        <ion-col>
+          <ion-card-title>Minh Nguyen</ion-card-title>
+          <ion-card-subtitle>Fullstack Developer</ion-card-subtitle>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button expand="block" size="small" fill="outline" color="primary"
+      >View profile</ion-button
+    >
+  </ion-card-header>
+  <ion-card-content>
+    <ion-card-subtitle color="dark">Account</ion-card-subtitle>
+    <p class="ion-padding-top">Setting & Privacy</p>
+    <p class="ion-padding-top">Help</p>
+    <p class="ion-padding-top">Language</p>
+  </ion-card-content>
+
+  <div class="item-divider"></div>
+
+  <ion-card-content>
+    <ion-card-subtitle color="dark">Manage</ion-card-subtitle>
+    <p class="ion-padding-top">Posts & Activities</p>
+    <p class="ion-padding-top">Job Posting Account</p>
+  </ion-card-content>
+
+  <div class="item-divider"></div>
+
+  <ion-card-content>
+    <p (click)="onSignOut()">Sign Out</p>
+  </ion-card-content>
+</ion-card>
