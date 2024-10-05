@@ -52,6 +52,7 @@ export class HeaderComponent implements OnInit {
       component: PopoverComponent,
       event: e,
       showBackdrop: false,
+      cssClass: 'my-custom-popover',
     });
 
     await popover.present();

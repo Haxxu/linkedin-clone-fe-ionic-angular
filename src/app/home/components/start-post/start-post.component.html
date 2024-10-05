@@ -1,0 +1,36 @@
+<ion-card>
+  <ion-card-header>
+    <ion-avatar>
+      <ion-img
+        src="https://images.unsplash.com/photo-1508185140592-283327020902?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ></ion-img>
+    </ion-avatar>
+    <ion-button
+      (click)="openModal()"
+      shape="round"
+      fill="outline"
+      color="medium"
+    >
+      <span class="ion-text-left">Start a post</span>
+    </ion-button>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-button color="medium" fill="clear">
+      <ion-icon color="secondary" name="image-outline"></ion-icon>
+      <ion-text>Photo</ion-text>
+    </ion-button>
+    <ion-button color="medium" fill="clear">
+      <ion-icon color="success" name="play-sharp"></ion-icon>
+      <ion-text>Video</ion-text>
+    </ion-button>
+    <ion-button color="medium" fill="clear">
+      <ion-icon color="warning" name="calendar-outline"></ion-icon>
+      <ion-text>Event</ion-text>
+    </ion-button>
+    <ion-button color="medium" fill="clear">
+      <ion-icon color="danger" name="newspaper-outline"></ion-icon>
+      <ion-text>Write article</ion-text>
+    </ion-button>
+  </ion-card-content>
+</ion-card>

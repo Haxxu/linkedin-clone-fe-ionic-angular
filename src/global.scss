@@ -36,8 +36,36 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
 
-.my-custom-class .popover-content {
+.my-custom-popover .popover-content {
   width: 300px;
   margin-top: 16px;
   --box-shadow: none;
+  --background: none;
+}
+
+.my-custom-modal {
+  --width: 552px;
+  --height: 400px;
+  margin-top: --400px;
+
+  ion-grid {
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  ion-textarea {
+    --padding-top: 0;
+  }
+}
+
+.item-divider {
+  border-bottom: 1px solid var(--ion-color-light-tint);
+}
+
+ion-button {
+  text-transform: initial;
+
+  ion-text {
+    margin-left: 8px;
+  }
 }
