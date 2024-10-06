@@ -5,6 +5,7 @@ import { ProfileSummaryComponent } from './components/profile-summary/profile-su
 import { StartPostComponent } from './components/start-post/start-post.component';
 import { AdvertisingComponent } from './components/advertising/advertising.component';
 import { AllPostsComponent } from './components/all-posts/all-posts.component';
+import { TabsComponent } from './components/tabs/tabs.component';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ import { AllPostsComponent } from './components/all-posts/all-posts.component';
     StartPostComponent,
     AdvertisingComponent,
     AllPostsComponent,
+    TabsComponent,
   ],
 })
 export class HomePage {
