@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, inject, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import {
@@ -14,6 +14,8 @@ import {
   IonInput,
   IonButton,
 } from '@ionic/angular/standalone';
+import { AuthService } from './services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -41,7 +43,8 @@ export class AuthPage implements OnInit {
 
   submissionType: 'login' | 'join' = 'login';
 
-  constructor() {}
+  private authService = inject(AuthService);
+  private router = inject(Router);
 
   ngOnInit() {}
 
@@ -51,10 +54,28 @@ export class AuthPage implements OnInit {
 
     if (this.submissionType === 'login') {
       console.log('handle login', { email, password });
+      this.authService.login(email, password).subscribe({
+        next: (res) => {
+          this.router.navigateByUrl('/home');
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
     } else if (this.submissionType === 'join') {
       const { firstName, lastName } = this.form?.value;
-      if (!firstName || lastName) return;
-      console.log('handle sign in', { email, password, firstName, lastName });
+      if (!firstName || !lastName) return;
+
+      const newUser = { email, password, firstName, lastName };
+
+      this.authService.register(newUser).subscribe({
+        next: (res) => {
+          this.toggleText();
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
     }
   }
 

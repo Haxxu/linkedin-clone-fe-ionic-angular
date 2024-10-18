@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import {
   IonCard,
   IonCardHeader,
@@ -9,6 +9,15 @@ import {
   IonCardContent,
   IonText,
 } from '@ionic/angular/standalone';
+import { take } from 'rxjs';
+import { Role } from 'src/app/auth/models/user.model';
+import { AuthService } from 'src/app/auth/services/auth.service';
+
+type BannerColors = {
+  colorOne: string;
+  colorTwo: string;
+  colorThree: string;
+};
 
 @Component({
   selector: 'app-profile-summary',
@@ -29,5 +38,13 @@ import {
 export class ProfileSummaryComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  private authService = inject(AuthService);
+
+  ngOnInit() {
+    // this.authService
+    //   .getUserRole()
+    //   .pipe(take(1))
+    //   .subscribe((role: Role) => {
+    //   });
+  }
 }

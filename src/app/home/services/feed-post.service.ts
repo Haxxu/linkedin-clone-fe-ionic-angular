@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class FeedPostService {
-  apiUrl = environment.apiUrl;
+  apiUrl = environment.baseApiUrl;
   constructor(private http: HttpClient) {}
 
   getSelectedPosts(take: number, skip: number) {

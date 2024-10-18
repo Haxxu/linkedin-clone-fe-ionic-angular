@@ -58,6 +58,5 @@ export class HeaderComponent implements OnInit {
     await popover.present();
 
     const { role } = await popover.onDidDismiss();
-    console.log(`Popover dismissed with role: ${role}`);
   }
 }
